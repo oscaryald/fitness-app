@@ -1,0 +1,58 @@
+%button {
+  outline: 0;
+  cursor: pointer;
+  border: 0;
+  background: transparent;
+}
+.confirm,
+.cancel{
+  @extend %button;
+  padding: 5px 10px;
+  margin: 0 0 0 5px;
+  font-size: 14px;
+}
+.error{
+  color: #a94442;
+  background: #f2dede;
+  border: 1px solid #a94442;
+  border-radius: 2px;
+  padding: 8px;
+  font-size: 14px;
+  margin: 10px 0 0;
+}
+.confirm{
+  color:#fff;
+  background: #d73a49;
+  border-radius: 3px;
+  transition: all .2s ease-in-out;
+  &:hover{
+    background: darken(#d73a49, 3%)
+  }
+}
+.list-item{
+  margin: 10px;
+  padding: 10px;
+  display: flex;
+  justify-content: space-between;
+ 
+  a{
+    color: #333;
+    text-decoration: none;
+  }
+  &__name{
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 10px;
+  }
+  &__ingredients{
+    font-size: 16px;
+    font-style: italic;
+    color: grey;
+  }
+ 
+}
+.trash{
+  border: none;
+  background: none;
+  cursor: pointer;
+}

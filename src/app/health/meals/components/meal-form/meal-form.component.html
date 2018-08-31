@@ -1,0 +1,87 @@
+<div  class="meal-form">
+  <form [formGroup]="form">
+    <div class="meal-form__name">
+      <label for="">
+        <h3>Meal name</h3>
+        <br>
+        <input 
+          type="text"
+          placeholder="e.q. English Breackfast"
+          formControlName="name"
+        >
+        <div class="error" *ngIf="required">
+          Wirkout name is required
+        </div>
+      </label>
+    </div>
+    <div class="meal-form__food">
+      <div class="meal-form__subtitle">
+        <h3>Food</h3>
+        <button
+          type="button"
+          class="btn-add"
+          (click)="addIngredient()"      
+        >
+        <img src="/assets/img/add-white.svg" alt="">
+        Add food
+        </button>
+      </div>
+      <div formArrayName="ingredients">
+        <label class="meal-form__ingredients" *ngFor="let current of ingredients.controls; index as i;" for="">
+          <input [formControlName]="i" placeholder="e.q. Eggs" type="text">
+          <span class="mail-form__remove" (click)="removeIngredient(i)"><img src="/assets/img/cross.svg" alt=""></span>
+        </label>
+      </div>
+    </div>
+
+    <div class="meal-form__submit">
+      <button
+          type="button"
+          class="button--create"
+          (click)="createMeal()"
+          *ngIf="!exists"
+        >
+        Create meal
+      </button>
+      <button
+          type="button"
+          class="button--create"
+          (click)="updateMeal()"
+          *ngIf="exists"
+      >
+        Save
+      </button>
+      
+      <a [routerLink]="['../']"
+        class="button button--cancel"
+      >Cancel</a>
+    </div>
+
+    <div class="meal-form__delete" *ngIf="exists">
+      <div  *ngIf="toggled">
+        <p>Deelete item?</p>
+        <button
+        class="confirm"
+        type="button"
+        (click)="removeMeal()"
+        >
+        Yes
+        </button>
+        <button
+          class="cancel"
+          type="button"
+          (click)="toggle()"
+        >
+        No
+        </button>
+      </div>
+      <button
+        class="trash"
+        type="button"
+        (click)="toggle()"
+      >
+      Delete
+      </button>
+    </div>
+  </form>
+</div>

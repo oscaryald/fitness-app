@@ -1,0 +1,190 @@
+%button {
+  outline: 0;
+  cursor: pointer;
+  border: 0;
+  background: transparent;
+}
+.confirm,
+.cancel{
+  @extend %button;
+  padding: 5px 10px;
+  margin: 0 0 0 5px;
+  font-size: 14px;
+}
+.error{
+  color: #a94442;
+  background: #f2dede;
+  border: 1px solid #a94442;
+  border-radius: 2px;
+  padding: 8px;
+  font-size: 14px;
+  margin: 10px 0 0;
+}
+.confirm{
+  color:#fff;
+  background: #d73a49;
+  border-radius: 3px;
+  transition: all .2s ease-in-out;
+  &:hover{
+    background: darken(#d73a49, 3%)
+  }
+}
+.btn-add{
+  display: flex;
+  align-items: center;
+  color: #fff;
+  background: #97c747;
+  border-radius: 50px;
+  padding: 6px 20px 6px 15px;
+  text-transform: uppercase;
+  border:none;
+  cursor: pointer;
+}
+.workout-form {
+  background: #fff;
+  box-shadow: 0 3px 4px rgba(0,0,0,.1);
+  border-radius: 3px;
+  border: 1px solid #c1cedb;
+  margin: 50px auto;
+  padding: 30px;
+  &__action {
+    margin: 10px 0 30px;
+  }
+  &__toggle {
+    border-radius: 0 0 3px 3px;
+    border-top: 1px solid #c1cedb;
+    background: #f8fafc;
+    padding: 10px;
+    margin: 0 -30px -30px;
+  }
+
+  input {
+    outline: 0;
+    font-size: 16px;
+    padding: 10px 15px;
+    margin: 0;
+    width: 100%;
+    background: #fafcfd;
+    color: #5777a8;
+    border: 1px solid #d1deeb;
+
+    &[type=email] {
+      border-radius: 3px 3px 0 0;
+    }
+    &[type=password] {
+      border-radius: 0 0 3px 3px;
+      margin: -1px 0 0;
+    }
+  }
+  &__subtitle{
+    padding: 20px 0;
+    border-top:1px solid #d1deeb;
+    border-bottom:1px solid #d1deeb;
+    margin: 20px 0;
+    display: flex;
+    justify-content: space-between;
+    vertical-align: center;
+  }
+  &__ingredients{
+    margin-bottom: 20px;
+    display: flex;
+  }
+}
+.workout-form__remove{
+  display: flex;
+  align-items: center;
+  padding: 6px 20px 6px 15px;
+  cursor: pointer;
+  margin-left: 20px;
+}
+.button--create{
+  display: flex;
+  align-items: center;
+  color: #fff;
+  background: #5777a8;
+  border-radius: 50px;
+  padding: 6px 20px 6px 15px;
+  text-transform: uppercase;
+  border:none;
+  cursor: pointer;
+}
+.button--cancel{
+  display: flex;
+  align-items: center;
+  color: #fff;
+  background: #a94442;
+  border-radius: 50px;
+  padding: 6px 20px 6px 15px;
+  text-transform: uppercase;
+  border:none;
+  cursor: pointer;
+}
+.workout-form__submit{
+  display: flex;
+  justify-content: space-between;
+  vertical-align: center;
+}
+
+%button {
+  outline: 0;
+  cursor: pointer;
+  border: 0;
+  background: transparent;
+}
+.confirm,
+.cancel{
+  @extend %button;
+  padding: 5px 10px;
+  margin: 0 0 0 5px;
+  font-size: 14px;
+}
+.error{
+  color: #a94442;
+  background: #f2dede;
+  border: 1px solid #a94442;
+  border-radius: 2px;
+  padding: 8px;
+  font-size: 14px;
+  margin: 10px 0 0;
+}
+.confirm{
+  color:#fff;
+  background: #d73a49;
+  border-radius: 3px;
+  transition: all .2s ease-in-out;
+  &:hover{
+    background: darken(#d73a49, 3%)
+  }
+}
+.workout-form__delete{
+  margin: 10px;
+  padding: 10px;
+  display: flex;
+  justify-content: space-between;
+ 
+  a{
+    color: #333;
+    text-decoration: none;
+  }
+  &__name{
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 10px;
+  }
+  &__ingredients{
+    font-size: 16px;
+    font-style: italic;
+    color: grey;
+  }
+ 
+}
+.trash{
+  display: flex;
+  align-items: center;
+  color: #fff;
+  background: #a94442;
+  border-radius: 50px;
+  padding: 6px 20px 6px 15px;
+  border:none;
+  cursor: pointer;
+}

@@ -1,0 +1,19 @@
+.controls{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #c1cedb;
+}
+button{
+  padding: 10px;
+  border-radius: 5px;
+  background: none;
+  border: none;
+  box-shadow: 0 0 10px rgba(0, 0, 0, .5);
+  display: block;
+  cursor: pointer;
+
+  &:hover{
+    background: #ECEFFB;
+  }
+}

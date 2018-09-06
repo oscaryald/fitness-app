@@ -1,0 +1,30 @@
+<div class="section">
+  <div class="section__bar">
+    {{name}}
+  </div>
+  <div class="section__item food"
+    *ngIf="section.meals; else addMeal"
+    (click)="onSelect('meals', section.meals)">
+    <img alt="" src="/assets/img/food.svg">
+    <span>{{section.meals | join}}</span>
+  </div>
+  <ng-template #addMeal>
+    <div class="section__item" (click)="onSelect('meals')">
+      <img src="/assets/img/plus.svg" alt="">
+      <span>Assign meal</span>   
+    </div>
+  </ng-template>
+
+  <div class="section__item workout"
+    *ngIf="section.workouts; else addWorkout"
+    (click)="onSelect('workouts', section.workouts)">
+    <img alt="" src="/assets/img/workout.svg">
+    <span>{{section.workouts | join}}</span>
+  </div>
+  <ng-template #addWorkout>
+    <div class="section__item" (click)="onSelect('workouts')">
+      <img src="/assets/img/plus.svg" alt="">
+      <span>Assign workout</span>
+    </div>
+  </ng-template>
+</div>

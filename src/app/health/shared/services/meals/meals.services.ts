@@ -50,7 +50,7 @@ export class MealsService {
 
   getMeal(key: string) {
     if (!key) {
-      return of();
+      return of({});
     }
     return this.store.select('meals')
     .pipe(filter(Boolean))
@@ -60,7 +60,7 @@ export class MealsService {
   }
 
   updateMeal(key: string, payload: Meal) {
-    return this.db.object(`meals/${this.uid}/${key}`).update(payload);
+    return this.db.object(`meals/${this.uid}/LLhs6wntSpDQJbidJgI`).update(payload);
   }
 
 }

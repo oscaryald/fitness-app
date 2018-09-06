@@ -6,13 +6,60 @@
         <br>
         <input 
           type="text"
-          placeholder="e.q. English Breackfast"
+          [placeholder]="placeholder"
           formControlName="name"
         >
         <div class="error" *ngIf="required">
           Workout name is required
         </div>
       </label>
+      <label for="">
+        <h3>Type</h3>
+        <app-worcout-type formControlName="type">
+        </app-worcout-type>
+      </label>
+    </div>
+    <div class="workout-form__details">
+      <div *ngIf="form.get('type').value === 'strength'">
+        <div class="workout-form__fields"
+            formGroupName="strength">
+          <label for="">
+            <h3>
+              Reps
+            </h3>
+            <input type="number" formControlName="reps">
+          </label>
+          <label for="">
+              <h3>
+                Sets
+              </h3>
+              <input type="number" formControlName="sets">
+            </label>
+            <label for="">
+                <h3>
+                  Weight <span>(kg)</span>
+                </h3>
+                <input type="number" formControlName="weight">
+              </label>
+        </div>
+      </div>
+      <div *ngIf="form.get('type').value === 'endurance'">
+        <div class="workout-form__fields"
+            formGroupName="endurance">
+          <label for="">
+            <h3>
+                Distance <span>(km)</span>
+            </h3>
+            <input type="number" formControlName="distance">
+          </label>
+          <label for="">
+              <h3>
+                  Duration <span>(minutes)</span>
+              </h3>
+              <input type="number" formControlName="duration">
+          </label>
+        </div>
+      </div>
     </div>
     <div class="workout-form__submit">
       <button

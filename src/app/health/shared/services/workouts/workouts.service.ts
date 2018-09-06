@@ -52,7 +52,7 @@ export class WorkoutsService {
 
   getWorkout(key: string) {
     if (!key) {
-      return of();
+      return of({});
     }
     return this.store.select('workouts')
     .pipe(filter(Boolean))

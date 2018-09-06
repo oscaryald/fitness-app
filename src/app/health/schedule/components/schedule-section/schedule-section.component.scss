@@ -1,0 +1,21 @@
+.section__bar{
+  padding: 10px;
+  background: #3581EB;
+  color: #fff;
+  text-align: center;
+}
+.section__item{
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid #c1cedb;
+  font-style: italic;
+  cursor: pointer;
+
+  img{
+    margin-right: 10px;
+    width: 22px;
+  }
+}
+
+

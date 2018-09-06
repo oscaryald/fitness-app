@@ -6,6 +6,7 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { WorkoutComponent } from './containers/workout/workout.component';
 import { WorkoutFormComponent } from './components/workout-form/workout-form.component';
 import { SharedModule } from '../shared/shared.module';
+import { WorcoutTypeComponent } from './components/worcout-type/worcout-type.component';
 
 export const ROUTES: Routes = [
   {
@@ -29,6 +30,6 @@ export const ROUTES: Routes = [
     RouterModule.forChild(ROUTES),
     SharedModule
   ],
-  declarations: [WorkoutsComponent, WorkoutComponent, WorkoutFormComponent]
+  declarations: [WorkoutsComponent, WorkoutComponent, WorkoutFormComponent, WorcoutTypeComponent]
 })
 export class WorkoutsModule { }

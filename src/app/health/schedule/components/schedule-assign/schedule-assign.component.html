@@ -1,0 +1,34 @@
+<div class="assign">
+  <div class="assign__wrapper">
+        <div class="assign__modal">
+          <h1 class="assign__title">
+            <img src="/assets/img/{{section.type === 'workouts' ? 'workout' : 'food'}}.svg" alt="">
+            Assign {{section.type}}
+          </h1>
+          <a [routerLink]="getRoute(section.type)" class="btn-add">
+            <img src="/assets/img/add-white.svg" alt="">
+            New {{section.type}}
+          </a>
+        </div>
+      
+        <div class="assign__list">
+          <span class="assign__empty" *ngIf="!list?.length">
+            <img src="/assets/img/face.svg" alt="">
+            Nothing here to assign
+          </span>
+          <div *ngFor="let item of list" 
+          [class.active]="exists(item.name)"
+          (click)="toggleItem(item.name)"
+          class="assign__item">
+            {{item.name}}
+          </div>
+        </div>
+      
+        <div class="assign__submit">
+          <button class="button" (click)="updateAssign()">Update</button>
+          <button class="button button--cancel" (click)="cancelAssign()">Cancel</button>
+        </div>
+  </div>
+  
+
+</div>

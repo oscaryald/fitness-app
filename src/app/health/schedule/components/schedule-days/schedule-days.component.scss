@@ -1,0 +1,17 @@
+.days{
+  display: flex;
+  padding: 20px 0;
+  justify-content: space-around;
+}
+.day{
+  padding: 10px;
+  border-radius: 50%;
+  background: #fff;
+  border:none;
+  cursor: pointer;
+
+  &.active {
+    background: #3581EB;
+    color: #fff;
+  }
+}
